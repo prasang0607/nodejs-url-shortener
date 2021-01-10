@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('partials/_header.ejs') %>
+  <body>
+    <%- include('partials/_navbar.ejs') %>
+    <section class="section pt-6 pb-0" id="copy-success" style="display: none">
+      <div class="container">
+        <div class="notification is-success p-3">
+          short url copied to clipboard.
+        </div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container">
+        <div class="columns is-centered">
+          <div class="column is-half-desktop has-text-centered">
+            <input
+              type="text"
+              class="p-4 is-size-5 is-size-4-tablet has-text-centered"
+              id="your-url"
+              spellcheck="false"
+              value="<%= req.headers.host + '/' + code %>"
+              disabled
+            />
+            <div class="is-flex is-justify-content-space-evenly mt-6">
+              <button
+                id="open-url"
+                class="button is-success has-background-success-dark"
+              >
+                Open URL
+              </button>
+              <button
+                id="copy-url"
+                class="button is-success has-background-success-dark"
+              >
+                Copy URL
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <%- include('partials/_scripts.ejs') %>
+  </body>
+</html>

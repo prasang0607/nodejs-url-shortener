@@ -1,0 +1,9 @@
+<% if (error_messages.length) { %>
+<section class="section pt-6 pb-0" id="flash_messages">
+  <div class="container">
+    <% error_messages.forEach(err_message => { %>
+    <div class="notification is-danger p-3"><%= err_message %></div>
+    <% }) %>
+  </div>
+</section>
+<% } %>

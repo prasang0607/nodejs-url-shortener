@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('partials/_header.ejs') %>
+  <body>
+    <%- include('partials/_navbar.ejs') %>
+    <section class="section">
+      <div class="container">
+        <% if (records.length) { %>
+        <p class="title">All URLs</p>
+        <div class="table-container">
+          <table class="table is-bordered is-striped is-fullwidth">
+            <thead>
+              <tr>
+                <th>code</th>
+                <th>kind</th>
+                <th>clicks</th>
+                <th style="width: 80%">path</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% records.forEach(record => { %>
+              <tr>
+                <td>
+                  <a
+                    class="is-ghost"
+                    href="/<%= record.code %>"
+                    target="_blank"
+                  >
+                    <%= record.code %>
+                  </a>
+                </td>
+                <td><%= record.kind %></td>
+                <td><%= record.clicks %></td>
+                <td class="is-truncated"><%= record.path %></td>
+              </tr>
+              <% }) %>
+            </tbody>
+          </table>
+        </div>
+        <% } else { %>
+        <p class="is-size-2 is-size-4-mobile">Oops! No short URL exists.</p>
+        <% } %>
+      </div>
+    </section>
+    <%- include('partials/_scripts.ejs') %>
+  </body>
+</html>

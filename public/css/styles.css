@@ -1,0 +1,17 @@
+body,
+.button,
+input[type="text"] {
+  font-family: "Google Sans", sans-serif !important;
+}
+::-moz-selection {
+  background: #eee;
+}
+::selection {
+  background: #eee;
+}
+.is-truncated {
+  max-width: 1px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

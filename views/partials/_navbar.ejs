@@ -1,0 +1,55 @@
+<nav
+  class="navbar is-white has-shadow"
+  role="navigation"
+  aria-label="main navigation"
+>
+  <div class="container">
+    <div class="navbar-brand">
+      <a class="navbar-item has-text-weight-medium is-size-5" href="/">
+        URL Shortener
+      </a>
+
+      <a
+        role="button"
+        class="navbar-burger"
+        aria-label="menu"
+        aria-expanded="false"
+        data-target="navbarBasicExample"
+      >
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+
+    <div class="navbar-menu">
+      <div class="navbar-end">
+        <div class="navbar-item">
+          <div class="buttons">
+            <% if (req.url === '/all') { %>
+            <a
+              class="button is-outlined has-text-weight-medium is-small"
+              href="/"
+            >
+              HOME
+            </a>
+            <% } else { %>
+            <a
+              class="button is-outlined has-text-weight-medium is-small"
+              href="/all"
+            >
+              ALL URLs
+            </a>
+            <% } %>
+            <a
+              class="button is-outlined has-text-weight-medium is-small"
+              href="/signout"
+            >
+              LOG OUT
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>

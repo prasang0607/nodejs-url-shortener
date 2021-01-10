@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('partials/_header.ejs') %>
+  <body>
+    <%- include('partials/_flash_message.ejs') %>
+    <section class="section mt-4">
+      <div class="container">
+        <div class="columns is-centered">
+          <div class="column is-4-tablet">
+            <div class="card">
+              <header class="card-header">
+                <p class="card-header-title has-text-weight-medium">Sign In</p>
+              </header>
+              <div class="card-content">
+                <div class="content">
+                  <form method="POST">
+                    <div class="field">
+                      <label
+                        class="label has-text-weight-medium"
+                        for="username"
+                      >
+                        Username
+                      </label>
+                      <div class="control">
+                        <input
+                          type="text"
+                          class="input is-small"
+                          id="username"
+                          name="username"
+                        />
+                      </div>
+                    </div>
+                    <div class="field">
+                      <label
+                        for="password"
+                        class="label has-text-weight-medium"
+                      >
+                        Password
+                      </label>
+                      <div class="control">
+                        <input
+                          type="password"
+                          class="input is-small"
+                          id="password"
+                          name="password"
+                          required
+                        />
+                      </div>
+                    </div>
+                    <button
+                      id="submit-button"
+                      class="is-fullwidth button mt-5 is-success has-background-success-dark"
+                    >
+                      Signin
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+  <%- include('partials/_scripts.ejs') %>
+</html>
