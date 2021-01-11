@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   openUrlBtn.addEventListener("click", () => {
-    const redirectUrl = yourUrlField.value.trim();
+    const redirectUrl = "//" + yourUrlField.value.trim();
     window.open(redirectUrl);
   });
 });
